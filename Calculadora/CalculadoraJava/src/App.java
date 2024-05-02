@@ -26,7 +26,7 @@ public class App {
                     numero1 = objScanner.nextInt();
                     System.out.println("Digite o segundo número");
                     numero2 = objScanner.nextInt();
-                    objCalculadora.subtrair(numero1, numero2);
+                    objCalculadora.subtrair(numero1, numero2);/*  */
 
                     break;
                 case 3:
