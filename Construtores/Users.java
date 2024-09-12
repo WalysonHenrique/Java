@@ -1,6 +1,6 @@
 package Construtores;
 
-public class Users {
+class Users {
    
     //Atributes of the users
     String name;
@@ -8,13 +8,18 @@ public class Users {
     String password;
 
 
+
     //Constructors
-    Users(String email, String password){
+    public Users(String email, String password){
         System.out.println("Constructor is calling");
         this.email = email;
         this.password = password;
     }
 
+    public Users(){
+
+    }
+    
 
     //methods
 
@@ -23,3 +28,4 @@ public class Users {
     };
 
 }
+
