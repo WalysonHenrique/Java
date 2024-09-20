@@ -24,6 +24,11 @@ class Animal{
 	}
 
 	public void exibirInformacoes(Animal objAnimal){
-		System.out.println("Nome da especie : " + objAnimal.especie + " \n" + "Idade do animal : " + objAnimal.idade);
+		//System.out.println("Nome da especie : " + objAnimal.especie + " \n" + "Idade do animal : " + objAnimal.idade);
+		System.out.printf("Nome da especie : %s   Idade do animal : %d", objAnimal.especie, objAnimal.idade);
+	}
+	public void exibirInformacoes(Felino objAnimal){
+		//System.out.println("Nome da especie : " + objAnimal.especie + " \n" + "Idade do animal : " + objAnimal.idade);
+		System.out.printf("Nome da especie : %s   Idade do animal : %d, garra do animal %.2f", objAnimal.especie, objAnimal.idade, objAnimal.garra);
 	}
 }
