@@ -2,7 +2,7 @@ class Cliente{
 
   private Integer numberAccount;
   private String agence;
-  private Double balance, credit;
+  private Float balance, credit;
 
 
 
@@ -11,7 +11,7 @@ class Cliente{
   };
 
   
-  public Cliente(Integer numberAccount, String agence, Double balance, Double credit){
+  public Cliente(Integer numberAccount, String agence,Float balance,Float credit){
     this.numberAccount = numberAccount;
     this.agence = agence;
     this.balance = balance;
@@ -33,7 +33,7 @@ class Cliente{
     return "a";
   }
 
-  public void setAgence(){}
+  public void setAgence(String agence){}
 
   public Float getBalance(){
     return 1.0f;
@@ -42,9 +42,16 @@ class Cliente{
   public Float getCredit(){return 0.0f;}
 
 
-  public void setCredit(){}
+  public void setCredit(Float value){}
 
-  public Float  
+  public Float  sacar(Float value){return 0.0f;}
+
+  public void depositar(Float value){}
+
+  public Boolean tansfer(Cliente cliente, Float value){ return true;}
+
+  public void imprimirExtrato(){}
+
 
 
 }
