@@ -1,8 +1,8 @@
 class Cliente{
 
-  Integer numberAccount;
-  String agence;
-  Double balance, credit;
+  private Integer numberAccount;
+  private String agence;
+  private Double balance, credit;
 
 
 
@@ -17,6 +17,34 @@ class Cliente{
     this.balance = balance;
     this.credit = credit;
   }
+
+
+
+  public Integer getNumberAccount(){
+
+
+
+    return 0;
+  }
+
+
+  public String getAgence(){
+
+    return "a";
+  }
+
+  public void setAgence(){}
+
+  public Float getBalance(){
+    return 1.0f;
+    }
+
+  public Float getCredit(){return 0.0f;}
+
+
+  public void setCredit(){}
+
+  public Float  
 
 
 }
