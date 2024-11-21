@@ -1,12 +1,18 @@
 package figuras.model;
-class Retangulo extends FiguraGeometrica2D{
+import java.util.List;
+
+import figuras.model.Ponto2D;
+public class Retangulo extends FiguraGeometrica2D{
     
-    private Integer x, y;
+    public Integer x, y;
 
     public Retangulo(){};
 
     public Retangulo(List<Ponto2D> pontos){
-        this.x = pontos[0];
-        this.y = pontos[1];
+       super(pontos);
+    }
+
+    public void exibir(){
+        System.out.println(this.x + this.y);
     }
 }

@@ -1,6 +1,6 @@
 package figuras.model;
  public class Ponto2D{
-    public Integer x, y;
+    private Integer x, y;
 
     public Ponto2D(){};
     
@@ -8,6 +8,30 @@ package figuras.model;
         this.x = x;
         this.y = y;
     }
+
+    public int getX(){
+        return x;
+    }
+
+
+    
+    public int getY(){
+        return y;
+    }
+
+
+    
+    public void setX(Integer x){
+        this.x = x;
+    }
+
+    
+    public void setY(Integer y){
+        this.y = y;
+    }
+
+
+
 
     public void exibir(){
         System.out.println(x + " " + y);
