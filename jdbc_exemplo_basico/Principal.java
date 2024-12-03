@@ -16,19 +16,52 @@ class Principal {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		Scanner objScanner = new Scanner(System.in);
 		List<Produto> produtos = new ArrayList<>();
+		String menu;
 
-		String nomeProduto = JOptionPane.showInputDialog("Digite o nome do produto:");
-		String valorProdutoS = JOptionPane.showInputDialog("Digite o valor do produto");
-
-		Float valorProduto = Float.valueOf(valorProdutoS);
-
-
+		menu = "1 - Cadastrar\n2 - Listar\n3 - Editar\n4 - Deletar\n0 - Sair";
+		Integer opcao = 1;
 		Produto objProduto = new Produto();
 
-		objProduto.inserirDados(nomeProduto, valorProduto);
+		while(opcao != 0){
+
+		opcao = Integer.parseInt(JOptionPane.showInputDialog(menu));	
 
 
-		produtos = objProduto.listarDados();
+		switch(opcao){
+		case 1 :
+			String nomeProduto = JOptionPane.showInputDialog("Digite o nome do produto:");
+			String valorProdutoS = JOptionPane.showInputDialog("Digite o valor do produto");
+			Float valorProduto = Float.valueOf(valorProdutoS);
+			objProduto.inserirDados(nomeProduto, valorProduto);
+			break;
+
+		case 2 :
+			produtos = objProduto.listarDados();
+			String todosProdutos = "";
+			for (Produto produto : produtos)
+			todosProdutos += produto.listar() + "\n\n";
+			JOptionPane.showMessageDialog(null, todosProdutos);
+	
+		break;
+		case 3 :
+
+		break;
+		case 4 :
+			Integer idProd = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o ID do produto a ser deletado:"));
+			objProduto.deletarDados(idProd);
+			JOptionPane.showMessageDialog(null, "Objeto deletado!" );
+		break;
+		case 0 :
+			JOptionPane.showMessageDialog(null, "Saindo...");
+		break;
+
+		}
+	}
+
+		
+
+
+		
 
 
 
@@ -36,11 +69,7 @@ class Principal {
 		
 
 
-		String todosProdutos = "";
-		for (Produto produto : produtos)
-			todosProdutos += produto.listar() + "\n\n";
-		JOptionPane.showMessageDialog(null, todosProdutos);
-	
+		
 
 
 
