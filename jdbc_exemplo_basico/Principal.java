@@ -44,6 +44,13 @@ class Principal {
 	
 		break;
 		case 3 :
+		Integer idProduto = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o ID do produto que deseja editar:"));
+		String nomeProdutoo = JOptionPane.showInputDialog(null, "Digite o novo nome do produto:");
+		String valorProdutoSS = JOptionPane.showInputDialog(null, "Digite o novo valor do produto:");
+		Float valorProdutoo = Float.valueOf(valorProdutoSS);
+		objProduto.editarProduto(idProduto, nomeProdutoo, valorProdutoo);
+
+
 
 		break;
 		case 4 :

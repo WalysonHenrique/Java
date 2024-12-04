@@ -96,4 +96,22 @@ class Produto {
 		}
 		
 	}
+
+	public void editarProduto(Integer id, String nomeProduto, Float valorProduto) throws UnsupportedEncodingException {
+		Statement statement = null;
+
+
+		try(Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost/padaria?" + "user=root&password=root&characterEncoding=UTF-8");){
+			statement = conexao.createStatement();
+			statement.execute("update PRODUTO set PROD_TX_DESCRICAO = '" + nomeProduto + "', " +
+                  "PROD_VL_PRECO = " + valorProduto + " " +
+                  "where PROD_ID_PRODUTO = " + id + ";");
+
+		}
+		catch(SQLException ex){
+			System.out.println("SQLException: " + ex.getMessage());
+			System.out.println("SQLState: " + ex.getSQLState());
+			System.out.println("VendorError: " + ex.getErrorCode());
+		}
+	}
 }

@@ -1,16 +1,23 @@
-package figuras;
-import java.util.ArrayList;
+import com.jogamp.opengl.*;
+import com.jogamp.opengl.awt.GLCanvas;
+import javax.swing.JFrame;
 
-import figuras.model.Ponto2D;
-import figuras.model.Retangulo;
+public class Principal {
+    public static void main(String[] args) {
+    
+        GLProfile profile = GLProfile.get(GLProfile.GL2);
+        GLCapabilities capabilities = new GLCapabilities(profile);
 
-class Principal{
-    public static void main(String[] args){
+       
+        GLCanvas canvas = new GLCanvas(capabilities);
+        canvas.addGLEventListener(new Renderizador());
 
-        Ponto2D pontos = new ArrayList<>();
-        pontos.add(2);
-        pontos.add(3);
-        Retangulo newRetang = new Retangulo(pontos);
-        newRetang.exibir();
+  
+        JFrame frame = new JFrame("Exibição de Figuras Geométricas 2D");
+        frame.getContentPane().add(canvas);
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
+    
