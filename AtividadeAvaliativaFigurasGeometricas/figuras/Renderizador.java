@@ -7,10 +7,10 @@ public class Renderizador implements GLEventListener {
     public Renderizador() {
         // Inicialize os pontos do retângulo
         pontos = new ArrayList<>();
-        pontos.add(new Ponto2D(0.2, 0.2));  // Canto inferior esquerdo
-        pontos.add(new Ponto2D(0.8, 0.2));  // Canto inferior direito
-        pontos.add(new Ponto2D(0.8, 0.6));  // Canto superior direito
-        pontos.add(new Ponto2D(0.2, 0.6));  // Canto superior esquerdo
+        pontos.add(new Ponto2D(2, 2));  // Canto inferior esquerdo
+        pontos.add(new Ponto2D(8, 2));  // Canto inferior direito
+        pontos.add(new Ponto2D(8, 6));  // Canto superior direito
+        pontos.add(new Ponto2D(2, 6));  // Canto superior esquerdo
     }
 
     @Override
